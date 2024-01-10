@@ -77,3 +77,10 @@
   }
 }
 @include nav-position();
+
+@mixin flex {
+  .flex {
+    display: flex;
+  }
+}
+@include flex;

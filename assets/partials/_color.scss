@@ -4,3 +4,8 @@ $button-colors: (
   success: #4caf50,
 );
 $bg-hero: #640fc5;
+
+.hero {
+  background-color: $bg-hero;
+  color: white;
+}
