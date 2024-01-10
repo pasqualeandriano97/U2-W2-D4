@@ -1,0 +1,79 @@
+@mixin floating($border-radius, $box-shadow, $border) {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  border: $border;
+}
+
+@mixin grid($parameter) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @if $parameter==1 {
+    .container div {
+      background-image: url("foto1.avif");
+      width: 100%;
+      height: 200px;
+      background-position: center;
+      background-clip: content-box;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  } @else if $parameter==2 {
+    .container div {
+      background-image: url("foto1.avif");
+      width: 50%;
+      height: 200px;
+      background-position: center;
+      background-clip: content-box;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  } @else if $parameter==3 {
+    .container div {
+      background-image: url("foto1.avif");
+      width: 33%;
+      height: 200px;
+      background-position: center;
+      background-clip: content-box;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  } @else {
+    .container div {
+      background-image: url("foto1.avif");
+      width: 25%;
+      height: 200px;
+      background-position: center;
+      background-clip: content-box;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@include grid(4);
+
+#hero {
+  @include floating(
+    10px,
+    0px 12px 15px -3px rgba(0, 0, 0, 0.74),
+    1px solid grey
+  );
+}
+
+@mixin nav-position {
+  nav {
+    display: flex;
+    ul {
+      list-style: none;
+      display: flex;
+      li a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+@include nav-position();

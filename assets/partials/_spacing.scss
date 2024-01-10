@@ -1,0 +1,27 @@
+$padding: (
+  sm: 5px,
+  normal: 10px,
+  md: 15px,
+  lg: 20px,
+  xl: 25px,
+  xxl: 30px,
+);
+$margin: (
+  sm: 5px,
+  normal: 10px,
+  md: 15px,
+  lg: 20px,
+  xl: 25px,
+  xxl: 30px,
+);
+
+@each $cicle, $element in $padding {
+  .p-#{$cicle} {
+    padding: $element;
+  }
+}
+@each $ciclem, $elementm in $margin {
+  .m-#{$ciclem} {
+    margin: $elementm;
+  }
+}
